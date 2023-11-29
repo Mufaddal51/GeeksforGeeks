@@ -23,16 +23,16 @@ int main() {
 
 
 int countOfElements(int arr[], int n, int x) 
-
-{
-    int count=0;
-    int i=0;
-    while(i<n && arr[i]<=x){
-        count++;
-        i++;
+{  int a=0; 
+    for(int i=0;i<n;i++){
+    if(arr[i]<=x){
+        a++;
+        
+        
+        
     }
-    return count;
-    
-    
+
+}
+return a;//9,9,9,9,10   X=9
     
 }
