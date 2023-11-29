@@ -5,20 +5,19 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
 public:
-    int sumOfDigits(int N){
+    int sumOfDigits(int N){//56789
         int sum=0;
-        while(N){
-            
-        
-        
-        sum=sum+N%10;
-        N=N/10;
+        while(N!=0){
+            int r=N%10;
+            sum=sum+r;
+             N=N/10;
         }
-    
         return sum;
-    }  
-        //code here
-    };
+        
+        
+        //code here 357 5 6 7 8 9
+    }
+};
 
 //{ Driver Code Starts.
 int main() 
@@ -34,4 +33,4 @@ int main()
     }
     return 0; 
 }
-// } Driver Code End;s
+// } Driver Code Ends
