@@ -6,14 +6,12 @@ using namespace std;
 class Solution {
   public:
     int mean(int N , int A[]) {
-        int ans=0;
-        for(int i=0;i<N;i++){
-            ans=ans+A[i];
-            ans++;
-        
-        }
-        return ans/N-1;
-        // code here
+        int sum=0;
+       for(int i=0;i<N;i++){
+           sum=sum+A[i];
+           
+       }
+       return sum/N;
     }
 };
 
