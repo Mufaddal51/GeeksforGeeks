@@ -13,17 +13,15 @@ using namespace std;
 class Solution{
   public:
     int missingNumber(vector<int>& array, int n) {
-       int sum=0;
-        for(int i=1;i<=n;i++){
-            sum=sum^i;
+        sort(array.begin(),array.end());
+        int sum=0;
+        int add=0;
+        for(int i=0;i<n;i++){
+            if(array[i]!=i+1){
+                return i+1;
+            }
+            
         }
-        
-        for(int i=0;i<n-1;i++){
-            sum=sum^array[i];
-                    }
-                    
-        return sum;
-        
     }
 };
 
