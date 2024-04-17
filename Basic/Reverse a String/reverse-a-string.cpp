@@ -13,20 +13,21 @@ class Solution
 {
     public:
     string reverseWord(string str)
-    { int s=0;
-     int e=str.length()-1;
-    
-    while(s<=e){
-        char temp=str[s];
-        str[s]=str[e];
-        str[e]=temp;
-        s++;
-        e--;
-    }
-    return str;
-    
+    { int i=0;
+      int n=str.length();
+      int j=n-1;
+      while(i<=j){
+          swap(str[i],str[j]);
+          i++;
+          j--;
+      }
         // Your code goes here
-    }
+       return str;
+        }
+    
+       
+        
+    
 };
 
 
