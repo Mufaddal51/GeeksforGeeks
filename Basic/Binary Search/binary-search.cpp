@@ -11,30 +11,26 @@ using namespace std;
 class Solution {
   public:
     int binarysearch(int arr[], int n, int k) {
-       int l=0,r=n-1;
-       int pos=-1;
-       while(l<=r){
-           int mid=(l+r)/2;
-           if(arr[mid]==k){
-               pos=mid;
-               break;
-           }
-           if(arr[mid]>k){
-               r=mid-1;
-           }
-           else{
-               l=mid+1;
-           }
-       }
-       return pos;
-      
-    } 
-    
+          int  start=0;
+       int end=n-1;
+       
         
+        while(start<=end){
+        int mid=start+(end-start)/2;
+            if(arr[mid]==k){
+                return mid;
+            }
+            else if(arr[mid]<k){
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+        }
+     return -1;
         // code here
-    
+    }
 };
-
 
 //{ Driver Code Starts.
 int main() {
